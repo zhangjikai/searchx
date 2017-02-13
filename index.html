@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Search X</title>
+
+    <meta name="keywords" content="Threejs,html5,game" />
+    <meta name="description" content="html5小游戏，使用threejs框架" />
+
+    <script type="text/javascript" src="libs/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.confirm/jquery.confirm.js"></script>
+    <script type="text/javascript" src="libs/threejs/three.min.js"></script>
+    <script type="text/javascript" src="libs/threejs/threex.dynamictexture.js"></script>
+    <script type="text/javascript" src="libs/common/hashtable.js"></script>
+
+    <script type="text/javascript" src="js/SearchX.js"></script>
+    <script type="text/javascript" src="js/Pool.js"></script>
+    <script type="text/javascript" src="js/Cube.js"></script>
+    <script type="text/javascript" src="js/PosUtil.js"></script>
+    <script type="text/javascript" src="js/Main.js"></script>
+
+    <link rel="stylesheet" href="libs/jquery.confirm/jquery.confirm.css">
+    <style>
+        body {
+            margin: 0 auto;
+            background: #E8E7E7;
+        }
+
+        div#start {
+            padding: 1em;
+            position: absolute;
+            width: 24em;
+            height: 12em;
+            left: 50%;
+            top: 50%;
+            margin-left: -12em;
+            margin-top: -6em;
+            border: 1px dotted #aaaaaa;
+        }
+
+        div#start p {
+            line-height: 2em;
+        }
+
+        #startGame {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        #startGame button {
+            font-size: 1em;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        div#canvasFrame {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        div#tip {
+            width: 100%;
+            min-width: 42em;
+            margin: 0 auto;
+            height: 2.5em;
+            padding-top: 0.3em;
+            background: #004A47;
+            text-align: center;
+            color: #fff;
+        }
+
+        #tip #content {
+            width: 42em;
+            margin: 0 auto;
+        }
+
+        .msg {
+            width: 8em;
+            font-size: 1.2em;
+            float: left;
+            text-align: left;
+            height: 2em;
+            line-height: 2em;
+            color: white;
+            font-family: Verdana, Geneva, sans-serif;
+            /*border-right: 1px dotted white;*/
+            /*padding: 0 20px;*/
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="game" >
+    <div id="canvasFrame"></div>
+    <div id="tip">
+        <div id="content">
+            <div class="msg" style="width: 10em">请在上面找出"<span id="target"></span>"</div>
+            <div class="msg">剩余时间：<span id="time"></span></div>
+            <div class="msg" style="width: 7em;">得分：<span id="score"></span></div>
+            <div class="msg" >最高得分：<span id="maxScore"></span></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
